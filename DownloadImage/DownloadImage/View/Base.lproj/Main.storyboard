@@ -267,6 +267,27 @@
                                                     <action selector="showMap:" destination="7Fc-45-CC3" eventType="touchUpInside" id="48D-JY-S1x"/>
                                                 </connections>
                                             </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZvP-TX-Woj">
+                                                <rect key="frame" x="0.0" y="647" width="414" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bp2-10-sa4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Posts"/>
+                                                        <connections>
+                                                            <segue destination="cdE-ln-Hl1" kind="show" identifier="ShowPosts" id="2Hp-ag-Uet"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXk-nc-h7L">
+                                                        <rect key="frame" x="0.0" y="39" width="414" height="31"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Albums"/>
+                                                        <connections>
+                                                            <segue destination="3wW-aE-WQq" kind="show" identifier="AlbomsSegue" id="Nhy-PJ-5IV"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -274,15 +295,18 @@
                                             <constraint firstItem="GCB-Fq-gqo" firstAttribute="leading" secondItem="S2P-rH-JQt" secondAttribute="leading" id="Cx6-lb-IFP"/>
                                             <constraint firstItem="MKp-Ft-Ue5" firstAttribute="leading" secondItem="S2P-rH-JQt" secondAttribute="leading" id="CyN-er-ed2"/>
                                             <constraint firstItem="JQF-1h-5XE" firstAttribute="leading" secondItem="S2P-rH-JQt" secondAttribute="leading" id="LLK-0S-X81"/>
+                                            <constraint firstItem="ZvP-TX-Woj" firstAttribute="top" secondItem="MKp-Ft-Ue5" secondAttribute="bottom" constant="8" symbolic="YES" id="NfK-KB-he3"/>
                                             <constraint firstItem="GCB-Fq-gqo" firstAttribute="top" secondItem="57Q-8C-TRb" secondAttribute="bottom" constant="10" id="O2p-Vu-dWE"/>
                                             <constraint firstAttribute="trailing" secondItem="Mq4-nC-RXo" secondAttribute="trailing" id="OR2-rV-F61"/>
                                             <constraint firstItem="Agx-PA-aPI" firstAttribute="leading" secondItem="S2P-rH-JQt" secondAttribute="leading" id="Ocs-pI-GKu"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZvP-TX-Woj" secondAttribute="trailing" id="Ond-xB-L8S"/>
                                             <constraint firstItem="MKp-Ft-Ue5" firstAttribute="top" secondItem="fBt-ij-0KO" secondAttribute="bottom" constant="136.5" id="PRO-UB-r2I"/>
                                             <constraint firstItem="JQF-1h-5XE" firstAttribute="top" secondItem="Mq4-nC-RXo" secondAttribute="bottom" constant="10" id="ReU-Th-eBH"/>
                                             <constraint firstItem="fBt-ij-0KO" firstAttribute="leading" secondItem="S2P-rH-JQt" secondAttribute="leading" constant="20" id="TXj-Gf-fad"/>
                                             <constraint firstItem="Mq4-nC-RXo" firstAttribute="leading" secondItem="S2P-rH-JQt" secondAttribute="leading" constant="20" id="V4K-s2-Tq3"/>
                                             <constraint firstItem="fBt-ij-0KO" firstAttribute="top" secondItem="Yr6-s7-5L0" secondAttribute="bottom" constant="10" id="Yvk-CO-IgI"/>
                                             <constraint firstAttribute="height" constant="1000" id="ZcC-OH-yo4"/>
+                                            <constraint firstItem="ZvP-TX-Woj" firstAttribute="leading" secondItem="S2P-rH-JQt" secondAttribute="leading" id="aph-Bh-if0"/>
                                             <constraint firstAttribute="trailing" secondItem="GCB-Fq-gqo" secondAttribute="trailing" id="av3-vj-BqM"/>
                                             <constraint firstItem="Yr6-s7-5L0" firstAttribute="leading" secondItem="S2P-rH-JQt" secondAttribute="leading" id="dqx-cA-V8g"/>
                                             <constraint firstItem="Agx-PA-aPI" firstAttribute="top" secondItem="S2P-rH-JQt" secondAttribute="top" constant="10" id="fRE-De-IUs"/>
@@ -336,7 +360,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VbX-Dg-Mel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2601" y="512"/>
+            <point key="canvasLocation" x="2664" y="512"/>
+        </scene>
+        <!--PostsAndComments-->
+        <scene sceneID="Wka-09-2le">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PostsAndComments" id="cdE-ln-Hl1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hBo-Ao-Hep"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jN0-eg-Ta8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3241" y="416"/>
+        </scene>
+        <!--AlbomsAndPhotos-->
+        <scene sceneID="rf7-AA-lxb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AlbomsAndPhotos" id="3wW-aE-WQq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="U0O-oZ-igX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dg-6R-uHT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3241" y="456"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="0ce-et-cJJ">
@@ -366,7 +410,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xs4-H5-ocT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3425" y="512"/>
+            <point key="canvasLocation" x="2665" y="-157"/>
         </scene>
         <!--ImageVC-->
         <scene sceneID="Rcd-I0-HEj">

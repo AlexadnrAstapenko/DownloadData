@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EUF-mS-3yo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="XYg-Tq-Cwz">
+            <objects>
+                <tableViewController id="dPh-B6-88t" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="ydL-S6-HiO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Efe-Og-52d">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Efe-Og-52d" id="FnS-FF-Ih2">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dPh-B6-88t" id="7UE-Ya-oDq"/>
+                            <outlet property="delegate" destination="dPh-B6-88t" id="RSB-is-h0a"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qLx-Aj-sfv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lzo-vy-FkQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="474"/>
+        </scene>
+        <!--Posts Table View Controller-->
+        <scene sceneID="Le2-4p-UxV">
+            <objects>
+                <tableViewController id="EUF-mS-3yo" customClass="PostsTableViewController" customModule="DownloadImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Xvs-Jn-EvH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Tfl-ua-NM8">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tfl-ua-NM8" id="eiv-7y-uxT">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EUF-mS-3yo" id="XAL-ir-XYE"/>
+                            <outlet property="delegate" destination="EUF-mS-3yo" id="crc-Nm-A15"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="R3C-44-5wc">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="RFW-l0-nsx">
+                            <connections>
+                                <segue destination="goB-DQ-PzL" kind="push" identifier="addNewPost" id="Voo-LL-2Bl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nDY-IL-urx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-429" y="-87"/>
+        </scene>
+        <!--Add PostVC-->
+        <scene sceneID="ObX-9M-qm3">
+            <objects>
+                <viewController storyboardIdentifier="AddPostVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="goB-DQ-PzL" customClass="AddPostVC" customModule="DownloadImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GF9-DY-9Gd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="63a-R1-oJm">
+                                <rect key="frame" x="25" y="69" width="364" height="665"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter post title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4C-mI-mGM">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Usg-Bw-lw9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="O2k-IL-NXx">
+                                        <rect key="frame" x="0.0" y="100" width="364" height="565"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="bWB-dZ-mKh">
+                                <rect key="frame" x="0.0" y="734" width="414" height="112"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGn-dK-4rV">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="Z3Z-fv-wpA"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Add post whith URLSession"/>
+                                        <connections>
+                                            <action selector="addNewPostURLSession:" destination="goB-DQ-PzL" eventType="touchUpInside" id="lJS-84-gKZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WsP-ij-f9B">
+                                        <rect key="frame" x="0.0" y="81" width="414" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="fFZ-eK-DYM"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Add new post whith Alamofire"/>
+                                        <connections>
+                                            <action selector="addNewPostAlamofire:" destination="goB-DQ-PzL" eventType="touchUpInside" id="JIb-Bh-PCR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="Fba-Wf-EaC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Uf-9t-9Jr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Uf-9t-9Jr" firstAttribute="trailing" secondItem="bWB-dZ-mKh" secondAttribute="trailing" id="4Nb-uq-B9J"/>
+                            <constraint firstItem="bWB-dZ-mKh" firstAttribute="leading" secondItem="7Uf-9t-9Jr" secondAttribute="leading" id="ICt-R7-y7s"/>
+                            <constraint firstItem="bWB-dZ-mKh" firstAttribute="top" secondItem="63a-R1-oJm" secondAttribute="bottom" id="RjD-4i-gaN"/>
+                            <constraint firstItem="7Uf-9t-9Jr" firstAttribute="trailing" secondItem="63a-R1-oJm" secondAttribute="trailing" constant="25" id="Vqg-9m-28S"/>
+                            <constraint firstItem="63a-R1-oJm" firstAttribute="leading" secondItem="7Uf-9t-9Jr" secondAttribute="leading" constant="25" id="aWZ-M7-RhA"/>
+                            <constraint firstAttribute="bottom" secondItem="bWB-dZ-mKh" secondAttribute="bottom" constant="50" id="dVt-Y2-8Pi"/>
+                            <constraint firstItem="63a-R1-oJm" firstAttribute="top" secondItem="7Uf-9t-9Jr" secondAttribute="top" constant="25" id="efd-9E-3yd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0gO-kH-iFV"/>
+                    <connections>
+                        <outlet property="bodyForPostTV" destination="O2k-IL-NXx" id="uR3-3V-a8r"/>
+                        <outlet property="titleForPost" destination="e4C-mI-mGM" id="9z1-oO-3io"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DPH-XJ-gnW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540.57971014492762" y="-253.125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
