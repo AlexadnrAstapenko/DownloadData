@@ -39,6 +39,8 @@ class MapViewController: UIViewController {
         // 6. На карте отображается аннотация отметки
         self.mapView.showAnnotations([sourceAnnotation, destinationAnnotation], animated: true)
         self.mapView
+        
+        
     }
 }
 
