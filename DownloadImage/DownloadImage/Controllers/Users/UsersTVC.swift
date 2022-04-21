@@ -25,7 +25,6 @@ class UsersTVC: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? UsserTVCell else { return UITableViewCell() }
         cell.userNamelbl.text = UsersTVC.users[indexPath.row].name
         cell.nameLbl.text = UsersTVC.users[indexPath.row].username
-        print(UsersTVC.users[indexPath.row])
         return cell
     }
 
