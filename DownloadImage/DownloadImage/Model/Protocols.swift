@@ -10,3 +10,6 @@ import Foundation
 protocol UsersTVCProtocol {
     func fetchData()
 }
+protocol PostTableVCProtocol {
+    func newPostAdded()
+}

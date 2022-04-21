@@ -19,7 +19,7 @@ final class ApiContstans {
     // Users
     static let todos = baseURL + "/todos"
     // Users
-    static let comments = baseURL + "/comments"
+    static let comments = baseURL + "/Comments"
     // Users
     static let profile = baseURL + "/profile"
 }

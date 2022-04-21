@@ -52,4 +52,16 @@ class DetailsVC: UIViewController {
         detailsView.long = long.doubleValue
         self.navigationController?.pushViewController(detailsView, animated: true)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowPosts",
+           let postVC = segue.destination as? PostsTableViewController
+        {
+            postVC.users = users
+//        } else if segue.identifier == "AlbomsSegue",
+//                  let albomsTableVC = segue.destination as? AlbomsTableVC
+//        {
+//            albomsTableVC.users = users
+//        }
+    }
+}
 }
